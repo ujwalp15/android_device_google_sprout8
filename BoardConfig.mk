@@ -21,3 +21,13 @@ LOCAL_PATH := device/google/sprout8
 TARGET_OTA_ASSERT_DEVICE := sprout,sprout8
 
 TARGET_RECOVERY_FSTAB := device/google/sprout8/rootdir/root/fstab.sprout
+
+# kernel stuff
+ifneq ($(strip $(USE_SABER_INLINE_KERNEL_BUILDING)),true)
+TARGET_KERNEL_CONFIG := cyanogenmod_sprout_defconfig
+TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
+endif
+BOARD_KERNEL_CMDLINE :=
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_PAGESIZE := 2048

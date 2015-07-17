@@ -1,5 +1,11 @@
 $(call inherit-product, device/google/sprout8/sprout8.mk)
 
+# Use Optimizations?
+USE_OPTIMIZATIONS := true
+
+# Enable this if this is a very very old device
+USE_LEGACY_GCC := false
+
 # Common PX stuff
 $(call inherit-product, vendor/px/config/common_full_phone.mk)
 
