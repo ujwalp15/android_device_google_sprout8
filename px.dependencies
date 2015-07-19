@@ -3,6 +3,11 @@
   {
     "repository": "android_device_google_sprout-common",
     "target_path": "device/google/sprout-common"
-  }
- 
+  },
+  {
+    "remote": "gh"
+    "repository": "ujwalp15/packages_apps_PXUpdater",
+    "target_path": "packages/apps/PXUpdater",
+    "revision": "lollipop-5.1_sprout8"
+ }
 ]
